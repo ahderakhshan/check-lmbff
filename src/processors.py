@@ -529,7 +529,7 @@ class TextClassificationProcessor(DataProcessor):
             elif self.task_name in ['mr', 'sst-5', 'subj', 'trec', 'cr', 'mpqa']:
                 examples.append(InputExample(guid=guid, text_a=line[1], label=line[0]))
             elif self.task_name in ['miras']:
-                examples.append(InputExample(guid=guid, text_a=line[1], short_text=line[1], label=line[0]))
+                examples.append(InputExample(guid=guid, text_a=line[1], label=line[0]))
             else:
                 raise Exception("Task_name not supported.")
 
